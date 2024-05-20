@@ -144,8 +144,26 @@ main {
     
   }
   #network {
-    width: 800px;
-    height: 600px;
-    border: 1px solid #ccc;
-    background-color: #fff;
+    width: 100%;
+    height: 400px; /* Adjust height as necessary for mobile */
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block; /* Ensure toggle button is visible on mobile */
+    }
+    #network {
+        height: 300px; /* Smaller network view for smaller devices */
+    }
+}
+
+html, body {
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+  touch-action: manipulation; /* Disable double-tap zoom on touch devices */
+}
+
+input[type="email"], textarea {
+  width: 100%; /* Full width for smaller screens */
+  min-height: 44px; /* Larger tap targets for touch devices */
 }
