@@ -49,31 +49,31 @@ $(document).ready(function() {
       {
           id: 1,
           label: 'Person 1',
-          image: 'img/person1.jpg',
+          image: 'Unknown_person.jpg',
           info: 'Person 1 description here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lacus eu justo vehicula iaculis nec sit amet leo.'
       },
       {
           id: 2,
           label: 'Person 2',
-          image: 'img/person2.jpg',
+          image: 'Unknown_person.jpg',
           info: 'Person 2 description here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lacus eu justo vehicula iaculis nec sit amet leo.'
       },
       {
           id: 3,
           label: 'Person 3',
-          image: 'img/person3.jpg',
+          image: 'Unknown_person.jpg',
           info: 'Person 3 description here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lacus eu justo vehicula iaculis nec sit amet leo.'
       },
       {
           id: 4,
           label: 'Person 4',
-          image: 'img/person4.jpg',
+          image: 'Unknown_person.jpg',
           info: 'Person 4 description here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lacus eu justo vehicula iaculis nec sit amet leo.'
       },
       {
           id: 5,
           label: 'Person 5',
-          image: 'img/person5.jpg',
+          image: 'Unknown_person.jpg',
           info: 'Person 5 description here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lacus eu justo vehicula iaculis nec sit amet leo.'
       }
   ]);
