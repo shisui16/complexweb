@@ -2,7 +2,7 @@ html,
 body,
 main {
   height: 100%;
-  background-color:darkslategray;
+  background-color:rgb(169, 164, 181);
 }
 
 ::-moz-selection {
@@ -35,11 +35,11 @@ main {
 }
 
 .background-primary {
-  background: #34495e;
+  background: #7c8e9f;
 }
 
 .background-secondary {
-  background: #2c3e50;
+  background: #819fbe;
 }
 
 .large {
