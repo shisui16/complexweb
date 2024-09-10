@@ -143,3 +143,11 @@ $(document).ready(function() {
     });
   });
   
+  $('#nodeModal').on('shown.bs.modal', function () {
+    $(this).attr('aria-hidden', 'false');
+  });
+  
+  $('#nodeModal').on('hidden.bs.modal', function () {
+    $(this).attr('aria-hidden', 'true');
+  });
+  
