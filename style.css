@@ -2,7 +2,7 @@ html,
 body,
 main {
   height: 100%;
-  background-color:rgb(169, 164, 181);
+  /*background-color:rgb(169, 164, 181);*/
 }
 
 ::-moz-selection {
@@ -11,7 +11,7 @@ main {
 }
 
 ::selection {
-  background: #34495e;
+  /*background: #34495e;*/
   color: #fff;
 }
 
@@ -57,6 +57,7 @@ main {
 
 .navbar-inverse {
   transition: all 0.2s ease-in;
+  background-color: transparent;
 }
 
 .thumbnail {
@@ -167,4 +168,18 @@ html, body {
 input[type="email"], textarea {
   width: 100%; /* Full width for smaller screens */
   min-height: 44px; /* Larger tap targets for touch devices */
+}
+#network-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;  /* Full viewport width */
+  position: relative;
+}
+
+#network {
+  width: 800px;   /* Adjust width as needed */
+  height: 600px;  /* Adjust height as needed */
+  background-color: transparent; /* Optional background color */
 }

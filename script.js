@@ -14,14 +14,14 @@ $(document).ready(function() {
     });
   
     // Change background of nav bar on scroll
-    $(window).scroll(function() {
+   /* $(window).scroll(function() {
         var scroll = $(window).scrollTop();
         if (scroll > window.innerHeight - 55) {
             $(".navbar").removeClass("transparent");
         } else {
             $(".navbar").addClass("transparent");
         }
-    });
+    });*/
   
     // Activate scrollspy to highlight nav item when scrolled over
     $('body').scrollspy({ target: ".navbar" });
@@ -123,13 +123,21 @@ $(document).ready(function() {
   
     const network = new vis.Network(container, data, options);
   
+    // Center the network and fit it into the container
+    network.fit({
+        animation: {
+            duration: 500,
+            easingFunction: "easeInOutQuad"
+        }
+    });
+  
     // Add event listener for node clicks
     network.on("click", function(params) {
         if (params.nodes.length > 0) {
             const nodeId = params.nodes[0];
             const node = nodes.get(nodeId);
             $('#nodeModalLabel').text(node.label);
-            $('#nodeModalBody').html('<img src="' + node.image + '" style="width: 100px; height: 100px; border-radius: 50%;"><br>' + node.info);
+            $('#nodeModalBody').html('<img src="' + node.image + '" style="width: 100px; height: 100px; border-radius: 50%; padding-bottom: 20px;"><br>' + node.info);
             $('#nodeModal').modal('show');
         }
     });
