@@ -2,17 +2,17 @@ $(document).ready(function() {
     // Smooth Scrolling for internal links
     $('a[href^="#"]').on("click", function(e) {
         e.preventDefault();
-  
+
         var target = this.hash;
         var $target = $(target);
-  
+
         $("html, body").stop().animate({
             scrollTop: $target.offset().top
         }, 900, 'swing', function() {
             window.location.hash = target;
         });
     });
-  
+
     // Change background of nav bar on scroll
    /* $(window).scroll(function() {
         var scroll = $(window).scrollTop();
@@ -22,14 +22,14 @@ $(document).ready(function() {
             $(".navbar").addClass("transparent");
         }
     });*/
-  
+
     // Activate scrollspy to highlight nav item when scrolled over
     $('body').scrollspy({ target: ".navbar" });
-  
+
     // Bind events to open and close portfolio popups
     $(".thumbnail-overlay").on("click", openProject.bind(this));
     $(".close-window").on("click", closeWindow.bind(this));
-  
+
     function openProject(event) {
         var id;
         if ($(event.target).next(".thumbnail-overlay").length) {
@@ -39,11 +39,11 @@ $(document).ready(function() {
         }
         $(id).fadeIn();
     }
-  
+
     function closeWindow(event) {
         $(event.target).parents(".full-screen").fadeOut();
     }
-  
+
     // Network animation with vis.js
     const nodes = new vis.DataSet([
         {
@@ -77,14 +77,14 @@ $(document).ready(function() {
             info: 'Person 5 description here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lacus eu justo vehicula iaculis nec sit amet leo.'
         }
     ]);
-  
+
     const edges = new vis.DataSet([
         { from: 1, to: 2 },
         { from: 1, to: 3 },
         { from: 1, to: 4 },
         { from: 1, to: 5 }
     ]);
-  
+
     const container = document.getElementById('network');
     const data = { nodes: nodes, edges: edges };
     const options = {
@@ -120,9 +120,9 @@ $(document).ready(function() {
             hover: true        // Keep hover enabled for node highlighting
         }
     };
-  
+
     const network = new vis.Network(container, data, options);
-  
+
     // Center the network and fit it into the container
     network.fit({
         animation: {
@@ -130,7 +130,7 @@ $(document).ready(function() {
             easingFunction: "easeInOutQuad"
         }
     });
-  
+
     // Add event listener for node clicks
     network.on("click", function(params) {
         if (params.nodes.length > 0) {
@@ -141,13 +141,17 @@ $(document).ready(function() {
             $('#nodeModal').modal('show');
         }
     });
-  });
-  
-  $('#nodeModal').on('shown.bs.modal', function () {
-    $(this).attr('aria-hidden', 'false');
-  });
-  
-  $('#nodeModal').on('hidden.bs.modal', function () {
-    $(this).attr('aria-hidden', 'true');
-  });
-  
+
+    $('#nodeModal').on('shown.bs.modal', function () {
+        $(this).attr('aria-hidden', 'false');
+    });
+
+    $('#nodeModal').on('hidden.bs.modal', function () {
+        $(this).attr('aria-hidden', 'true');
+        $('body').removeClass('modal-open');
+    });
+
+    $('#nodeModal').on('show.bs.modal', function () {
+        $('body').addClass('modal-open');
+    });
+});

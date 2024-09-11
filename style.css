@@ -183,3 +183,6 @@ input[type="email"], textarea {
   height: 600px;  /* Adjust height as needed */
   background-color: transparent; /* Optional background color */
 }
+body.modal-open {
+  overflow: auto !important;
+}
