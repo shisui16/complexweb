@@ -132,7 +132,7 @@ $(document).ready(function() {
     });
 
     // Add event listener for node clicks
-    network.on("click", function(params) {
+   /* network.on("click", function(params) {
         if (params.nodes.length > 0) {
             const nodeId = params.nodes[0];
             const node = nodes.get(nodeId);
@@ -141,7 +141,7 @@ $(document).ready(function() {
             $('#nodeModal').modal('show');
         }
     });
-
+*/
     $('#nodeModal').on('shown.bs.modal', function () {
         $(this).attr('aria-hidden', 'false');
     });
