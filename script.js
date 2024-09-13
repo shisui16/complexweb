@@ -132,7 +132,7 @@ $(document).ready(function() {
     });
 
     // Add event listener for node clicks
-   /* network.on("click", function(params) {
+    network.on("click", function(params) {
         if (params.nodes.length > 0) {
             const nodeId = params.nodes[0];
             const node = nodes.get(nodeId);
@@ -141,17 +141,26 @@ $(document).ready(function() {
             $('#nodeModal').modal('show');
         }
     });
-*/
+
     $('#nodeModal').on('shown.bs.modal', function () {
         $(this).attr('aria-hidden', 'false');
     });
 
     $('#nodeModal').on('hidden.bs.modal', function () {
-        $(this).attr('aria-hidden', 'true');
         $('body').removeClass('modal-open');
     });
-
+    
     $('#nodeModal').on('show.bs.modal', function () {
         $('body').addClass('modal-open');
     });
 });
+
+
+
+
+$('.burger, .overlay').click(function(){
+    $('.burger').toggleClass('clicked');
+    $('.overlay').toggleClass('show');
+    $('nav').toggleClass('show');
+    $('body').toggleClass('overflow');
+  });
