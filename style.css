@@ -17,20 +17,17 @@ main {
 
 .jumbotron1 {
   padding-top: 150px;
-  padding-bottom: 150px;
   margin-bottom: 0;
   background-color: #73ADE8;
 }
 .jumbotron2 {
   padding-top: 150px;
-  padding-bottom: 150px;
   margin-bottom: 0;
   background-color: #a07dc4;
 }
 
 .jumbotron3 {
   padding-top: 150px;
-  padding-bottom: 150px;
   margin-bottom: 0;
   background-color: #7e57a6;
 }
@@ -671,4 +668,11 @@ body.modal-open {
 .profile:focus img {
   filter: grayscale(0);
   transform: scale(1.05) rotate(1deg);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
